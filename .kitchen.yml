@@ -1,8 +1,8 @@
 ---
 driver:
-  #name: docker
+  name: docker
   #use_sudo: false ## MAC HACK
-  name: vagrant
+  #name: vagrant
 
 provisioner:
   #name: chef_solo
