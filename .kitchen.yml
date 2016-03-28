@@ -1,9 +1,12 @@
 ---
 driver:
+  #name: docker
+  #use_sudo: false ## MAC HACK
   name: vagrant
 
 provisioner:
-  name: chef_solo
+  #name: chef_solo
+  name: chef_zero
 
 platforms:
   - name: ubuntu-14.04
