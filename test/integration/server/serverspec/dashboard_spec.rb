@@ -3,14 +3,10 @@ require 'serverspec'
 # Required by serverspec
 set :backend, :exec
 
-describe "Git Daemon" do
+describe "SSH  Daemon" do
 
-  it "is listening on port 9418" do
-    expect(port(9418)).to be_listening
-  end
-
-  it "has a running service of git-daemon" do
-    expect(service("git-daemon")).to be_running
+  it "is listening on port 22" do
+    expect(port(22)).to be_listening
   end
 
 end
