@@ -1,0 +1,29 @@
+# Use this file to configure the Overcommit hooks you wish to use.
+
+PreCommit:
+  ALL:
+    problem_on_unmodified_line: warn
+    requires_files: true
+    required: false
+    quiet: false
+
+  BundleCheck:
+    enabled: true
+
+  RuboCop:
+    enabled: true
+    command: ['bundle', 'exec', 'rubocop']
+    include:
+      - '**/*.gemspec'
+      - '**/*.rb'
+      - template-dir/hooks/overcommit-hook
+    on_warn: fail # Treat all warnings as failures
+
+  TrailingWhitespace:
+    enabled: true
+    exclude:
+      - '**/db/structure.sql' # Ignore trailing whitespace in generated files
+
+  YamlSyntax:
+    enabled: true
+

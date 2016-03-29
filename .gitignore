@@ -1,3 +1,5 @@
 .kitchen/
+.idea/
 .kitchen.local.yml
 Berksfile.lock
+
