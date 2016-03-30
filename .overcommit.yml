@@ -19,6 +19,13 @@ PreCommit:
       - template-dir/hooks/overcommit-hook
     on_warn: fail # Treat all warnings as failures
 
+  Foodcritic:
+     enabled: true
+     include:
+       - '**/*.rb'
+     on_warn: fail # Treat all warnings as failures
+
+
   TrailingWhitespace:
     enabled: true
     exclude:
