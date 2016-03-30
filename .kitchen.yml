@@ -1,6 +1,7 @@
 ---
 driver:
-  name: docker
+  #name: docker
+  name: vagrant
   use_sudo: false ## MAC HACK
 
 provisioner:
@@ -12,5 +13,6 @@ platforms:
 suites:
   - name: server
     run_list:
+      - recipe[mysqld::server]
       - recipe[dashboard::server]
     attributes:    

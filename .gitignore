@@ -1,5 +1,8 @@
 .kitchen/
 .idea/
+tmp/
 .kitchen.local.yml
 Berksfile.lock
+cookbooks/
+
 
