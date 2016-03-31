@@ -11,7 +11,9 @@ platforms:
   - name: ubuntu-14.04
 
 suites:
-  - name: server
+  - name: dashboard
     run_list:
-      - recipe[dashboard::server]
+      - recipe[dashboard::apt]
+      - recipe[dashboard::mysql]
+      - recipe[dashboard::git-daemon]
     attributes:    

@@ -3,11 +3,6 @@ inherit_from: .rubocop_todo.yml
 AllCops:
   Exclude:
     - db/schema.rb
-    - db/seeds.rb
-    - db/migrate/*.rb
-    - bin/*
-    - config/environments/*.rb
-    - config/initializers/*.rb
     -
 
 AccessorMethodName:
