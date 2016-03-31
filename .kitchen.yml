@@ -14,6 +14,7 @@ suites:
   - name: dashboard
     run_list:
       - recipe[dashboard::apt]
+      - recipe[dashboard::nginx]
       - recipe[dashboard::mysql]
-      - recipe[dashboard::git-daemon]
+
     attributes:    
