@@ -9,7 +9,6 @@ gem "berkshelf"
 gem "busser"
 gem "pry"
 
-
 group :development do
   gem "rubocop", require: false
   gem "foodcritic", require: false
