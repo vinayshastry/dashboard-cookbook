@@ -4,10 +4,11 @@ ruby "2.3.0"
 gem "test-kitchen"
 gem "kitchen-vagrant"
 gem "kitchen-docker"
+gem "kitchen-openstack"
 gem "berkshelf"
 gem "busser"
 gem "pry"
-gem "kitchen-openstack"
+
 
 group :development do
   gem "rubocop", require: false
