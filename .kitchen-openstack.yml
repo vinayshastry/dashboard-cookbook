@@ -1,0 +1,33 @@
+---
+driver:
+  name: openstack
+  openstack_username: <%= ENV['USERNAME'] %>
+  openstack_api_key: <%= ENV['API_KEY'] %>
+  openstack_auth_url: <%= ENV['AUTH_URL'] %>
+  openstack_tenant: <%= ENV['TENANT_NAME'] %>
+  require_chef_omnibus: true
+  image_ref: Centos6_Basic_Image
+  flavor_ref: CO3-Large
+  network_ref:
+    - CK-Data-Net
+    - CK-Monitor-Net
+
+transport:
+  username: <%= ENV['SSH_USERNAME'] %>
+  password: <%= ENV['SSH_PASSWORD'] %>
+
+platforms:
+  - name: centos-6.5
+
+suites:
+  - name: dashboard-data
+    run_list:
+      - recipe[dashboard::apt]
+      - recipe[dashboard::mysql]
+    attributes:
+
+  - name: dashboard-web
+    run_list:
+      - recipe[dashboard::apt]
+      - recipe[dashboard::nginx]
+    attributes:
