@@ -11,10 +11,21 @@ platforms:
   - name: ubuntu-14.04
 
 suites:
-  - name: dashboard
+  - name: dashboard-web
     run_list:
       - recipe[dashboard::apt]
       - recipe[dashboard::nginx]
-      - recipe[dashboard::mysql]
+    attributes:
 
-    attributes:    
+  - name: dashboard-server
+    run_list:
+      - recipe[dashboard::apt]
+      - recipe[dashboard::ruby]
+      - recipe[dashboard::rails]
+    attributes:
+
+  - name: dashboard-data
+    run_list:
+      - recipe[dashboard::apt]
+      - recipe[dashboard::mysql]
+    attributes:
