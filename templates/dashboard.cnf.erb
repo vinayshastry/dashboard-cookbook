@@ -1,0 +1,20 @@
+[client]
+default-character-set          = utf8
+port                           = 3306
+socket                         = /var/run/mysql-foo/mysqld.sock
+
+[mysql]
+default-character-set          = utf8
+
+[mysqld]
+user                           = mysql
+pid-file                       = /var/run/mysql-server/mysqld.pid
+socket                         = /var/run/mysql-server/mysqld.sock
+port                           = 3306
+datadir                        = /var/lib/mysql-server
+tmpdir                         = /tmp
+log-error                      = /var/log/mysql-server/error.log
+!includedir /etc/mysql-server/conf.d
+
+[mysqld_safe]
+socket                         = /var/run/mysql-server/mysqld.sock
