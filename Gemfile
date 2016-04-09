@@ -27,4 +27,5 @@ group :development, :test do
   gem "brakeman", require: false
   gem "serverspec"
   gem "chefspec"
+  gem "leibniz"
 end

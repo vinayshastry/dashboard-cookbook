@@ -4,5 +4,5 @@ tmp/
 .kitchen.local.yml
 Berksfile.lock
 cookbooks/
-
-
+env.sh
+.kitchen.cis.yml
